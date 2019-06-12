@@ -34,3 +34,9 @@ def sample(request):
 
     return render(request, 'sample/sample.html', context)
     #return JsonResponse({'a':'b'})
+
+
+def api_sample(request):
+
+
+    return JsonResponse({'result': 200})

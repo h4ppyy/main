@@ -6,5 +6,6 @@ from .djangoapps.login import views as LoginViews
 
 urlpatterns = [
     path('', SampleViews.sample, name='sample'),
+    path('api_sample', SampleViews.api_sample, name='api_sample'),
     path('login', LoginViews.login, name='login'),
 ]
