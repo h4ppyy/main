@@ -1,15 +1,11 @@
-#-*- coding: utf-8 -*-
+import json
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_protect
 from django.db import connections
-
-#UTIL
-import json
-
 from django.conf import settings
-from backend.djangoapps.common.views import common_sample
-from backend.djangoapps.common.views import dictfetchall
+from backend.djangoapps.common.views import *
+
 
 def sample(request):
 

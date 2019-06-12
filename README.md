@@ -29,7 +29,7 @@
 - <code>make mig</code>  
 - <code>make sql</code>  
 - <code>make server</code>  
-  
+
 접속 방법
 -------------
 - django  
@@ -56,4 +56,3 @@
 
 ##### default
 - 이 브랜치를 가장 많이 사용할거에요 (경량화)
-
