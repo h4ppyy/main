@@ -9,6 +9,8 @@
 - django 2.0.5
 - djangomako 1.1.1
 
+개발환경 구축
+-------------
 - <code>mkdir workspace</code> 
 - <code>git clone https://github.com/h4ppyy/main</code>   
 - <code>cd main</code>    
