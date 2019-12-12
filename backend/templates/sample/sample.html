@@ -20,7 +20,7 @@
     })
     .done(function( data ) {
       var link = document.createElement('a');
-      link.href = '/static/banner/' + data.result;
+      link.href = '/static/banner/history/' + data.result;
       link.download = 'event.jpg';
       document.body.appendChild(link);
       link.click();
