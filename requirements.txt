@@ -1,4 +1,5 @@
-Django
+Django==2.2.5
 djangomako==1.1.1
-mysqlclient
-pycrypto
+mysqlclient==1.4.4
+pycrypto==2.6.1
+requests==2.22.0
