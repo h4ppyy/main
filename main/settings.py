@@ -1,12 +1,14 @@
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-SECRET_KEY = 'fj@9(_0ecerym9(a=lqv_-@6smmg92^lm3z=02kr@xl7d=4m7i'
 
 DEBUG = True
 
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SECRET_KEY = 'fj@9(_0ecerym9(a=lqv_-@6smmg92^lm3z=02kr@xl7d=4m7i'
 ALLOWED_HOSTS = ['*']
+
+BANNER_PATH = BASE_DIR + '/backend/static/banner/'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -105,7 +107,6 @@ TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 USE_L10N = True
-USE_TZ = True
 
 STATIC_ROOT = BASE_DIR + '/static/'
 STATIC_URL = '/static/'

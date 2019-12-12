@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>Sample Page</title>
-    <link rel="icon" href="/static/common/img/flask.png">
+  <meta charset="UTF-8">
+  <title>Sample Page</title>
+  <link rel="icon" href="/static/common/img/flask.png">
 </head>
 <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
 <body>
-
+  <button type="button" class="btn btn-success" onclick="createBanner()">Create Banner</button>
+  <input type="text" id="csrf_token" value=${csrf_token}>
 </body>
 <script src="/static/vendor/jquery/jquery.min.js"></script>
 <script src="/static/vendor/bootstrap/bootstrap.min.js"></script>
+<script>
+  function createBanner() {
+    var csrf_token = $('#csrf_token').val();
+    $.post( "/api/v1/sample", {
+      csrfmiddlewaretoken: csrf_token
+    })
+    .done(function( data ) {
+      var link = document.createElement('a');
+      link.href = '/static/banner/' + data.result;
+      link.download = 'event.jpg';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+</script>
 </html>
