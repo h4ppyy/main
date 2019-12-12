@@ -2,41 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>sample</title>
+    <title>Sample Page</title>
+    <link rel="icon" href="/static/common/img/flask.png">
 </head>
-<link rel="stylesheet" type="text/css" href="/static/sample/css/sample.css">
-
+<link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
 <body>
-    <h1> mako template </h1>
 
-    <h3> mako sample </h3>
-    sample_key = ${sample_key}
-
-    <h3> css sample </h3>
-    <div class="sample"></div>
-
-    <h3> img sample </h3>
-    <img src="/static/sample/img/sample.png" alt="sample">
-
-    <h3> js sample </h3>
-    <button onclick="myFunction()">Try it</button>
-
-    <button onclick="callAPI()">Ajax</button>
 </body>
-
-<script src="/static/sample/js/sample.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="/static/sample/js/jquery_cookie.js"></script>
-
-<script>
-function callAPI(){
-  $.post( "/api_sample", {
-     csrfmiddlewaretoken: $.cookie('csrftoken'),
-     name: "John"
-   })
-  .done(function( data ) {
-    console.log('data.result -> ', data.result);
-  });
-}
-</script>
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/vendor/bootstrap/bootstrap.min.js"></script>
 </html>

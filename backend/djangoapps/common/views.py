@@ -12,7 +12,6 @@ from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from Crypto import Random
 from Crypto.Cipher import AES
-
 from backend.models import *
 
 
